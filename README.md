@@ -1,5 +1,8 @@
-# TheWeatherMan
+# TheWeatherMan  ![alt text](https://github.com/lowzijian/TheWeatherMan/img/weatherman2.png)
 The Weather Man web is created to test fetching temperature api from azure database where the data are collected using Arduino temperature sensor follow with some coding.
+
+TheWeatherMan icon used in this project : 
+https://www.flaticon.com/free-icon/jesus_1619302#term=jesus&page=1&position=13
 
 Bootstrap template used in this project : 
 https://startbootstrap.com/previews/creative/
