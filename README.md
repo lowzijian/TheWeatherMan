@@ -1,4 +1,4 @@
-# TheWeatherMan  ![Logo of TheWeatherMan](https://github.com/lowzijian/TheWeatherMan/master/img/to/weatherman2.png)
+# TheWeatherMan  ![weatherMan_icon](https://github.com/lowzijian/TheWeatherMan/blob/master/img/weatherman2.png)
 The Weather Man web is created to test fetching temperature api from azure database where the data are collected using Arduino temperature sensor follow with some coding.
 
 TheWeatherMan icon used in this project : 
