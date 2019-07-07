@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>The Weather man </title>
+
+  <!-- Font Awesome Icons -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+  <!-- Plugin CSS -->
+  <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+  <!-- Theme CSS - Includes Bootstrap -->
+  <link href="css/creative.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top" onload ="typeWriter()">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Weather Man</a>
+      <img id= "logo" class="img-fluid" src="img/weatherman.png" alt="weather man">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto my-2 my-lg-0">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">Forecast</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#portfolio">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Masthead -->
+  <header class="masthead">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center justify-content-center text-center">
+        <div class="col-lg-10 align-self-end">
+          <h1 class="text-uppercase text-white font-weight-bold " >How was the Weather today ? </h1>
+          <hr class="divider my-4">
+        </div>
+        <div class="col-lg-8 align-self-baseline">
+          <p id = "description" class="text-white-75 font-weight-light mb-5" ></p>
+          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Check weather forecast</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!--Forecast Section -->
+  <section class="page-section bg-primary" id="about">
+    <div class="container h-80">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+            <a class="weatherwidget-io" href="https://forecast7.com/en/3d14101d69/kuala-lumpur/" data-label_1="KUALA LUMPUR" data-label_2="WEATHER" data-icons="Climacons Animated" data-theme="original" data-basecolor="#39425C" data-highcolor="#fd9797" data-mooncolor="#d4d4d4" data-cloudcolor="#f7f7f7" data-cloudfill="#ffffff" >KUALA LUMPUR WEATHER</a>
+            <script>
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+            //Typing Effect Added in Weather Man
+            var i = 0;
+            var txt = 'Weather Man says " Humid and Mostly Cloudy"';
+            var speed = 50; /* The speed/duration of the effect in milliseconds */
+
+            function typeWriter() {
+              if (i < txt.length) {
+                document.getElementById("description").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+              }
+            }
+            </script>
+          <hr class="divider light my-5 ">
+        </div>
+      </div>
+      <div class="container h-50">
+          <div class="row justify-content-center">
+              <div class="col-lg-8 text-center">
+                   <h4 style= "color: white">Room Temperature </h4>
+                   <p style= "color: lightgray ; font-size: 15px">collected using Arduino ESP2866</p>
+              </div>
+          </div>
+          <div class="row justify-content-center" style ="color: rgb(214, 222, 247); font-size: 25px  ">
+              <div class ="col-sm-2 text-center">
+                  <p id= "temperature1" style = "margin :10px ; color: white; ">"13 &#8451;"</p>
+                  <p style = "color:grey ; font-size:15px"> Current</p>
+              </div>
+              <div class ="col-sm-2 text-center">
+                  <p id= "temperature2" style = "margin :10px ; ">13 &#8451;</p>
+                  <p style = "color:grey ; font-size:15px"> A few minutes ago</p>
+              </div>
+              <div class ="col-sm-2 text-center">
+                  <p id= "temperature3"style = "margin :10px ; ">13 &#8451;</p>
+                  <p style = "color:grey ; font-size:15px"> An Hour ago</p>
+              </div>
+              <div class ="col-sm-2 text-center">
+                  <p id= "temperature4" style = "margin :10px; ">13 &#8451;</p>
+                  <p style = "color:grey ; font-size:15px"> 8 Hours ago</p>
+              </div>
+              <div class ="col-sm-2 text-center">
+                  <p id= "temperature5" style = "margin :10px; ">13 &#8451;</p>
+                  <p style = "color:grey ; font-size:15px"> One day ago</p>
+              </div>
+           </div>
+           <div class="row justify-content-center my-5">
+              <p id ="demo" style= "color: gray ; font-size: 10px"></p>
+            <script>
+                var d = new Date();
+                document.getElementById("demo").innerHTML = "latest update at "+d;
+            </script>
+           </div>
+       </div>
+   
+  </section>
+
+  <!-- Services Section -->
+  <section class="page-section" id="services">
+    <div class="container">
+      <h2 class="text-center mt-0">At Your Service</h2>
+      <hr class="divider my-4">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="mt-5">
+            <img class="img-fluid" src="img/ServiceThumb/forecaster.png" alt="" style= "margin: 15px">
+            <h3 class="h4 mb-2">Best Forecasters</h3>
+            <p class="text-muted mb-0">We forecast the most accurate weather data</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="mt-5">
+            <img class="img-fluid" src="img/ServiceThumb/world.png" alt="" style= "margin: 15px">
+            <h3 class="h4 mb-2">Live Broadcast</h3>
+            <p class="text-muted mb-0">Deliver the ultimate realistic experience</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="mt-5">
+              <img class="img-fluid" src="img/ServiceThumb/diamond.png" alt="" style= "margin: 15px">
+            <h3 class="h4 mb-2">Better news</h3>
+            <p class="text-muted mb-0">Every news are updated daily!!</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="mt-5">
+              <img class="img-fluid" src="img/ServiceThumb/like.png" alt="" style= "margin: 15px">
+            <h3 class="h4 mb-2">Made with Love</h3>
+            <p class="text-muted mb-0">Weather Man shares his love to everyone, Isnt it lovely?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <div class="container-fluid p-0">
+      <div class="row no-gutters">
+        <div class="col-lg-4 col-sm-6">
+          <a class="portfolio-box" href="img/portfolio/fullsize/1.jpg">
+            <img class="img-fluid" src="img/portfolio/thumbnails/1.jpg" alt="">
+            <div class="portfolio-box-caption">
+              <div class="project-category text-white-50">
+                  Top 10 2019 best weather mobile applications
+              </div>
+              <div class="project-name">
+                  Based on BBC News
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <a class="portfolio-box" href="img/portfolio/fullsize/2.jpg">
+            <img class="img-fluid" src="img/portfolio/thumbnails/2.jpg" alt="">
+            <div class="portfolio-box-caption">
+              <div class="project-category text-white-50">
+                First Tornado uproar occurs in Petaling Jaya
+              </div>
+              <div class="project-name">
+               Destruction awaits
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <a class="portfolio-box" href="img/portfolio/fullsize/3.jpg">
+            <img class="img-fluid" src="img/portfolio/thumbnails/3.jpg" alt="">
+            <div class="portfolio-box-caption">
+              <div class="project-category text-white-50">
+                "Little Effect on Weather" 
+              </div>
+              <div class="project-name">
+                By La Nina
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <a class="portfolio-box" href="img/portfolio/fullsize/4.jpg">
+            <img class="img-fluid" src="img/portfolio/thumbnails/4.jpg" alt="">
+            <div class="portfolio-box-caption">
+              <div class="project-category text-white-50">
+                Beach packed with Malaysians during March
+              </div>
+              <div class="project-name">
+                Malaysia Hottest Time
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <a class="portfolio-box" href="img/portfolio/fullsize/5.jpg">
+            <img class="img-fluid" src="img/portfolio/thumbnails/5.jpg" alt="">
+            <div class="portfolio-box-caption">
+              <div class="project-category text-white-50">
+                Disastrous flash flood in Kedah
+              </div>
+              <div class="project-name">
+                150 people still missing
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <a class="portfolio-box" href="img/portfolio/fullsize/6.jpg">
+            <img class="img-fluid" src="img/portfolio/thumbnails/6.jpg" alt="">
+            <div class="portfolio-box-caption p-3">
+              <div class="project-category text-white-50">
+                Tropical storm changes courses on way to Thailand
+              </div>
+              <div class="project-name">
+                Discover More
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="page-section bg-dark text-white">
+    <div class="container text-center">
+      <h2 class="mb-4">Join Our Newsletter Now !</h2>
+      <a class="btn btn-light btn-xl" href="https://startbootstrap.com/themes/creative/"><img src="img/mail.png" style ="padding: 2px"></a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="page-section" id="contact">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="mt-0">About Us</h2>
+          <hr class="divider my-4">
+          <p class="text-muted mb-5">Weather Man Malaysia is an operation business division of the Weather Man Worldwide Corporation (WMC) responsible for gathering and broadcasting of weather news and forecasts The department is one of the world's largest weather forecasts orgaisation and generates about 120 hours of radio and television output each day, as well as online new coverage.</p>
+          <img style= "align-content: center" id= "logo" class="img-fluid" src="img/weatherman2.png" alt="weather man">       
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-light py-5">
+    <div class="container">
+      <div class="small text-center text-muted">Copyright &copy; 2019 - Weather Man Malaysia</div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/creative.min.js"></script>
+
+  <!-- bootcamp script to get real time update of temperature -->
+  <script src="bootcamp.js"></script>
+
+
+
+
+</body>
+
+</html>
