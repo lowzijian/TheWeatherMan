@@ -3,3 +3,8 @@ The Weather Man web is created to test fetching temperature api from azure datab
 
 Bootstrap template used in this project : 
 https://startbootstrap.com/previews/creative/
+
+Website for this project :
+https://statichostig.z23.web.core.windows.net/
+
+A static website hosted using microsoft azure student
