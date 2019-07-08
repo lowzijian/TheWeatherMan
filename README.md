@@ -10,4 +10,5 @@ https://startbootstrap.com/previews/creative/
 Website for this project :
 https://statichostig.z23.web.core.windows.net/
 
-A static website hosted using microsoft azure student
+A static website hosted using microsoft azure student.
+
